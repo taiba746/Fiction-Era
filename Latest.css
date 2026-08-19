@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: darkred;
+}
+.books{
+  padding: 50px;
+  text-align: center;
+}
+.fiction-heading{
+    font-size:40px;
+    font-weight:900;
+    text-align:center;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:darkred;
+    position:relative;
+    margin-bottom:35px;
+    animation:glow 2s infinite alternate;
+}
+
+.fiction-heading::before{
+    content:"✦ ✦ ✦";
+    position:absolute;
+    top:-22px;
+    left:50%;
+    transform:translateX(-50%);
+    color:darkred;
+    letter-spacing:10px;
+    font-size:14px;
+}
+
+.fiction-heading::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-12px;
+    transform:translateX(-50%);
+    width:120px;
+    height:4px;
+    background:darkred;
+    border-radius:20px;
+    animation:line 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px rgba(139,0,0,.4);
+    }
+    to{
+        text-shadow:0 0 25px rgba(255,0,0,.8);
+    }
+}
+
+@keyframes line{
+    from{
+        width:120px;
+    }
+    to{
+        width:200px;
+    }
+}
+
+.book-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card{
+  background: whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+}
+
+.card img{
+  width: 250px;
+  height: 250px;
+}
+.cat-box{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cat-box div{
+  background: #f8d7da;
+  padding: 20px;
+  border-radius: 10px;
+}
+footer{
+  text-align: center;
+  padding: 15px;
+  background: #f8d7da;
+}
+.btn{
+  text-decoration: none;
+ display: inline-block;
+  font-size: small;
+  padding: 12px 25px;
+  background-color:whitesmoke ;
+}
+h1{
+  margin: none;
+}
+@media (max-width: 768px) {
+    .books {
+        padding: 35px 12px;
+    }
+
+    .fiction-heading {
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .book-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 330px;
+        margin: auto;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        max-height: 380px;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 9px 16px;
+    }
+}
