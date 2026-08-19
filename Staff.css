@@ -252,3 +252,66 @@ body{
         font-size: 16px;
     }
 }
+/* ===== FINAL MOBILE FIX ===== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .main {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .container {
+        width: 94% !important;
+        margin: 15px auto !important;
+        padding: 15px !important;
+
+        /* THIS IS THE IMPORTANT PART */
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .container .title {
+        grid-column: 1 / -1 !important;
+        text-align: center !important;
+        font-size: 21px !important;
+        margin: 5px 0 10px !important;
+    }
+
+    .container .card {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .container .card img {
+        width: 100% !important;
+        height: 170px !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    .container .card p {
+        text-align: center !important;
+        font-size: 14px !important;
+        margin: 10px 5px !important;
+    }
+
+    .fiction-heading {
+        text-align: center !important;
+        font-size: 28px !important;
+    }
+}
